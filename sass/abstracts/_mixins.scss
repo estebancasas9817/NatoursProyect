@@ -1,0 +1,29 @@
+// ====== MEDIA QUERIES =========
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == movil {
+    @media (max-width: 37.5em) {
+      // 600px/16 = 37.5em
+      @content;
+    }
+  }
+  @if $breakpoint == tabletaV {
+    @media (max-width: 56.25em) {
+      // 900px/16 = 56.25
+      @content;
+    }
+  }
+  @if $breakpoint == tabletaH {
+    @media (max-width: 75em) {
+      //1200px / 16 = 75em
+
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800px / 16 = 112.5em
+      @content;
+    }
+  }
+}

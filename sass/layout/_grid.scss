@@ -1,0 +1,66 @@
+//======== GRID =========
+.fila {
+  margin: 0px auto;
+  max-width: $width-grid;
+  @include respond(tabletaV) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: $margen-vertical;
+
+    @include respond(tabletaV) {
+      margin-bottom: $margen-vertical-small;
+    }
+  }
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col {
+    float: left;
+    &:not(:last-child) {
+      margin-right: $margen-horizontal;
+      @include respond(tabletaV) {
+        margin-right: 0;
+        margin-bottom: $margen-vertical-small;
+      }
+    }
+
+    @include respond(tabletaV) {
+      width: 100% !important;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$margen-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$margen-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$margen-horizontal}) / 3) + #{$margen-horizontal}
+    );
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$margen-horizontal}) / 4) + #{$margen-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$margen-horizontal}) / 4);
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$margen-horizontal}) / 4) + 2 *#{$margen-horizontal}
+    );
+  }
+}

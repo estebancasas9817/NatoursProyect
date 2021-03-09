@@ -1,0 +1,102 @@
+.aboutSection {
+  background-color: $color-gris-claro-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+
+  @include respond(tabletaV) {
+    padding: 20rem 0;
+  }
+}
+
+.featuresSection {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primario-claro, 0.7),
+      rgba($color-primario-oscuro, 0.7)
+    ),
+    url(/img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+  @include respond(tabletaV) {
+    padding: 10rem 0;
+  }
+}
+
+.toursSection {
+  background-color: $color-gris-claro-1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -9rem;
+  @include respond(tabletaV) {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+.sectionStories {
+  padding: 15rem 0;
+  position: relative;
+  @include respond(tabletaV) {
+    padding: 10rem 0;
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primario-claro,
+    $color-primario-oscuro
+  );
+
+  @include respond(tabletaV) {
+    padding: 10rem 0;
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.9) 0%,
+      rgba(#fff, 0.9) 50%,
+      transparent 50%
+    ),
+    url(/img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+  @include respond(tabletaH) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 65%,
+        transparent 65%
+      ),
+      url(/img/nat-10.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tabletaV) {
+    background-image: linear-gradient(
+        to right,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 100%
+      ),
+      url(/img/nat-10.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+    @include respond(tabletaH) {
+      width: 65%;
+    }
+
+    @include respond(tabletaV) {
+      width: 100%;
+    }
+  }
+}

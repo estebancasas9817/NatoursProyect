@@ -1,0 +1,43 @@
+// ======== RESETEO ==============
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; // 1rem = 10px; 10px/16 = 62.5%
+
+  // width < 1200
+  @include respond(tabletaH) {
+    font-size: 56.25%; // 1 rem = 9px; 9/16 = 56.25
+  }
+
+  // width < 900
+  @include respond(tabletaV) {
+    font-size: 50%; // 1 rem = 8px; 8/16 = 50
+  }
+
+  // width > 1800
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px; 12/16 = 75
+  }
+
+  //! NO PONGO EL DEL MOVIL PORQUE TAMBIEN TENDRIA EL FONT SIZE
+  //! 50% Y COMO LA TABLETAV TIENE EL MISMO TAMAÑO DE FUENTE (50%) PUES
+  //! SOLO PONGO ESA!
+}
+
+body {
+  padding: 3rem;
+
+  @include respond(tabletaV) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primario;
+  color: #fff;
+}

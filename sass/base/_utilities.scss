@@ -1,0 +1,29 @@
+.uCenterText {
+  text-align: center !important;
+}
+
+.uMarginBottom-8 {
+  margin-bottom: 8rem !important;
+  @include respond(tabletaV) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.uMarginBottom-4 {
+  margin-bottom: 4rem !important;
+  @include respond(tabletaV) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.uMarginBottom-2 {
+  margin-bottom: 1.5rem !important;
+}
+
+.uMargintop-big {
+  margin-top: 8rem !important;
+}
+
+.uMargintop-huge {
+  margin-top: 10rem !important;
+}
